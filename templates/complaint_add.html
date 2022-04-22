@@ -1,0 +1,25 @@
+
+{% extends 'student_home.html' %}
+{% load crispy_forms_tags %}
+{% block content %}
+<div class="col-xl-6">
+                                <div class="card mb-4">
+                                    <div class="card-header">
+                                        <i class="fas fa-chart-area me-1"></i>
+                                        Add complaint
+                                    </div>
+                                    <div class="card-body">
+                                        <form method="post">{% csrf_token %}
+                                            <div class="row mb-3">
+                                                <div class="col-md-6">
+                                                    <div class="form-floating mb-3 mb-md-0">
+                                                        {{form|crispy}}
+                                                        <button type="submit" class="btn btn-primary">submit</button>
+
+                                        </form>
+                                        </form>
+                                    </div>
+                                </div>
+
+
+{% endblock %}
